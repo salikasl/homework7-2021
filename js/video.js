@@ -1,4 +1,5 @@
 var video = document.getElementById("player1");
+video.loop = true
 var vidVolume = document.querySelector("#volume")
 
 window.addEventListener("load", function() {
@@ -29,10 +30,6 @@ document.querySelector("#faster").addEventListener("click", function() {
 
 document.querySelector("#skip").addEventListener("click", function() {
 	video.currentTime += 15
-	if (video.ended) {
-		video.currentTime = 0
-		video.play()
-	}
 	console.log(video.currentTime)
 });
 
